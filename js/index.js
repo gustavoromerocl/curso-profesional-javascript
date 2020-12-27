@@ -46,13 +46,39 @@ console.log(edad !== 24)//True - Comparación estricta
 24 == 24 || "hola" == "hola" // operador OR 
 !(24 == 24 || "hola" == "hola") // operador NOT 
 
-
+/**Condiciones */
 if(24 == 24 && "hola" == "hola") {
     console.log("condicion complida")
 }else if (24 == 24 || "hola" == "hola"){
     console.log("condicion complida")
 }else{
     console.log("Se ejecuta si ninguna ")
+};
+
+/**Ciclos */
+
+for(let i = 1; i <= 10; i++){
+    if(i > 5) break; //Si se ejecuta detiene el ciclo
+    console.log(i);
+};
+
+for(let i = 1; i <= 10; i++){
+    if(i % 2 == 0) continue; //Si se cumple la condicion ejecuta el ciclo
+    console.log(i);
+};
+
+//While evalua primero la ciondicion y luego ejecuta el codigo
+let i = 1;
+while(i <= 10){
+    console.log(i);
+    ++i;
 }
+
+//DoWhile se ejecuta al menos una vez antes de evaluar la condicion
+let j =1;
+do{
+    console.log(j);
+    ++j;
+}while(j <= 10)
 
 
