@@ -81,4 +81,22 @@ do{
     ++j;
 }while(j <= 10)
 
+/**Undefined, Null y NaN */
 
+//Undefined : La variable no ha sido incializada con ningun valor
+let numero;
+console.log(typeof(numero));
+
+//Null: Es un dato vacio que corresponde a un object
+numero = null;
+console.log(typeof(numero));
+
+//undefined es un tipo de dato, mientras que null es un object, sin embargo ambos representan un valor vacio
+console.log(null === undefined)
+console.log(null == undefined)
+
+//NaN: Indica que el valor no es un número
+console.log("sadjasdk" * 3);
+
+//Infinity: Indica un valor decimal infinito
+console.log(100/0);
