@@ -40,5 +40,13 @@ console.log(24 === "24")//False - Comparación estricta
 console.log(edad === 24)//True - Comparación estricta
 console.log(edad !== 24)//True - Comparación estricta
 
+/**Operadores Lógicos (true o false)*/
+
+24 == 24 && "hola" == "hola" // Operador AND 
+24 == 24 || "hola" == "hola" // operador OR 
+!(24 == 24 || "hola" == "hola") // operador NOT 
+
+
+
 
 
