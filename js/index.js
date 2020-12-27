@@ -10,15 +10,35 @@ const pi = 3.1416;
 
 //operaciones aritmeticas + - / * %
 
-//Utilidades de la clase Math
+/*Utilidades de la clase Math*/
 console.log(Math.PI)    //Retorna el valor de PI
 console.log(Math.pow(10,2)) //Elevar un número al cuadrado
 console.log(Math.pow(10,3)) //Elevar un número a el cubo
 console.log(Math.round(6.5)) //Redondea el número que recibe
 console.log(Math.sqrt(4)) //Raíz cuadrada del número que recibe
 
-//Booleanos
+/*Booleanos*/
 let booleano = new Boolean(1);
 console.log(booleano.toString());
 
 //Valores que retornan falso = undefined, NaN, null, 0, -0, "", false
+
+
+/*Operadores de comparación*/
+let edad = 24;
+
+console.log(edad == 24) //True
+console.log(edad == 20) //False
+console.log(edad != 20) //True
+console.log(edad > 20) //True
+console.log(edad < 20) //False
+console.log(edad <= 20) //False
+console.log(edad >= 20) //True
+
+console.log(24 == "24")//True
+console.log(24 === "24")//False - Comparación estricta
+console.log(edad === 24)//True - Comparación estricta
+console.log(edad !== 24)//True - Comparación estricta
+
+
+
