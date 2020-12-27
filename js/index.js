@@ -7,3 +7,12 @@ var apellido = "Romero";
 
 //Constante: El valor no cambia en tiempo de ejecución
 const pi = 3.1416;
+
+//operaciones aritmeticas + - / * %
+
+//Utilidades de la clase Math
+console.log(Math.PI)    //Retorna el valor de PI
+console.log(Math.pow(10,2)) //Elevar un número al cuadrado
+console.log(Math.pow(10,3)) //Elevar un número a el cubo
+console.log(Math.round(6.5)) //Redondea el número que recibe
+console.log(Math.sqrt(4)) //Raíz cuadrada del número que recibe
