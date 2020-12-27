@@ -47,6 +47,12 @@ console.log(edad !== 24)//True - Comparación estricta
 !(24 == 24 || "hola" == "hola") // operador NOT 
 
 
-
+if(24 == 24 && "hola" == "hola") {
+    console.log("condicion complida")
+}else if (24 == 24 || "hola" == "hola"){
+    console.log("condicion complida")
+}else{
+    console.log("Se ejecuta si ninguna ")
+}
 
 
