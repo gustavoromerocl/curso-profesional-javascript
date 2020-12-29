@@ -100,3 +100,41 @@ console.log("sadjasdk" * 3);
 
 //Infinity: Indica un valor decimal infinito
 console.log(100/0);
+
+//Ejercicios del bloque
+
+// 1- Tomando como entrada un número entero, imprimir si es par o impar.
+
+/**
+let number = prompt();
+if(number % 2 == 0){
+    console.log("El número es par");
+}else{
+    console.log("El numero es impar");
+}
+*/
+
+//2- Recibir dos números usando prompt y sumarlos, restarlos, dividirlos y multiplicarlos
+
+/**
+let number1 = prompt();
+let number2 = prompt();
+
+
+console.log('resta: ', number1-number2);
+console.log('division: ', number1/number2);
+console.log('multiplicacion: ', number1*number2);
+console.log('suma: ', parseInt(number1) + parseInt(number2));
+*/
+
+//3- Imprimir la sucesión fibonacci el número de veces que indicó el usuario
+
+//4- Programar el juego del "Número Mágico" en el que se define un número y el usuario trata de adivinarlo, si el número que ingresó el usuario es menor, imprimir la pista "El número mágico es mayor", si el número que ingresó el usuario es mayor, imprimir la pista "El número mágico es menor",
+ let numeroMagico = 7;
+ let input = null;
+
+ do{
+      input = prompt()
+      if(input > numeroMagico)console.log("El número mágico es menor") 
+      if(input < numeroMagico)console.log("El número mágico es mayor") 
+ }while(input != numeroMagico);
