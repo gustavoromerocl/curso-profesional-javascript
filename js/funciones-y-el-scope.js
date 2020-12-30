@@ -60,7 +60,7 @@ console.log(suma_todos(1,2));
 
 //Funciones Anónimas
 
-function excutor(funcion){
+function executor(funcion){
   funcion();
 }
 
@@ -70,6 +70,43 @@ function decirHola(){
 
 //executor(decirHola) //Se puede llamar a la funcion sin parentesis
 
-executor(function(){
+executor(function () {
   console.log("Hola") //Función anónima
-})
+});
+
+//El Contexto 
+
+//this hace referencia al objeto que contiene el codigo.-
+function demo (){
+  console.log(this);
+}
+
+demo();
+
+let objeto = {
+  demo: function(){
+    console.log(this)
+  }
+}
+
+objeto.demo();
+
+let executorThis = {
+  funcion: null,
+  execute: function(f){ 
+    this.funcion = f; 
+    this.funcion(); }  //si agregamos la funcion como propiedad de el objeto que la llama el conexto vuelve a ser local
+}
+
+executorThis.execute(objeto.demo) // retorna el contecto global puesto que esta siendo llamado desde una funcion y no desde el objeto.  
+
+let usuario = {
+  nombre: "Gustavo",
+  apellido: "Romero",
+  nombreCompleto: function(){
+    console.log(this.nombre + ' ' + this.apellido);
+  }
+}
+
+usuario.nombreCompleto();
+executorThis.execute(usuario.nombreCompleto) //Retorna undefined ya que el contexto desde donde se ejecuta cambia, por lo que this no encuentra los valores de nombre y apellido
