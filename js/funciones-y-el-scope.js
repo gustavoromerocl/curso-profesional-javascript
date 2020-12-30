@@ -110,3 +110,17 @@ let usuario = {
 
 usuario.nombreCompleto();
 executorThis.execute(usuario.nombreCompleto) //Retorna undefined ya que el contexto desde donde se ejecuta cambia, por lo que this no encuentra los valores de nombre y apellido
+
+
+//Arrow Functions
+
+let demoArrow = () =>{
+  console.log("Hola mundo");
+}
+
+demoArrow();
+
+let suma = (a,b) => a + b;
+
+console.log(suma(2,3));
+
