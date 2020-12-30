@@ -57,3 +57,19 @@ function suma_todos(){
 }
 
 console.log(suma_todos(1,2));
+
+//Funciones Anónimas
+
+function excutor(funcion){
+  funcion();
+}
+
+function decirHola(){
+  console.log("Hola");
+}
+
+//executor(decirHola) //Se puede llamar a la funcion sin parentesis
+
+executor(function(){
+  console.log("Hola") //Función anónima
+})
