@@ -169,6 +169,6 @@ let tutor = {
 
 execute(tutor.nombreCompleto);
 
-//apply  function.apply(window, [Argumentos])
+//apply  function.apply(window, [Argumentos]) **window = contexto
 
 executor(tutor.nombreCompleto.bind(tutor)) //asigna el conexto cuando se llama a la funcion
