@@ -124,3 +124,30 @@ let suma = (a,b) => a + b;
 
 console.log(suma(2,3));
 
+
+//Arrow Functions y el contexto
+
+/**
+let estudiante = {
+  firstName: "Gustavo",
+  lastName: "Romero",
+  nombreCompleto: function(){
+    setTimeout(function(){
+      console.log(this.firstName + ' ' + this.lastName);
+    }, 1000)  
+  }
+}
+ */
+
+//La ventaja de las arrow functions es que no modifican el contexto de this
+let estudiante = {
+  firstName: "Gustavo",
+  lastName: "Romero",
+  nombreCompleto: function(){
+    setTimeout(()=>{
+      console.log(this.firstName + ' ' + this.lastName);
+    }, 1000)  
+  }
+}
+
+estudiante.nombreCompleto();
