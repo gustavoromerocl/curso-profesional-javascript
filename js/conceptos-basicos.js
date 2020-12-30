@@ -130,11 +130,14 @@ console.log('suma: ', parseInt(number1) + parseInt(number2));
 //3- Imprimir la sucesión fibonacci el número de veces que indicó el usuario
 
 //4- Programar el juego del "Número Mágico" en el que se define un número y el usuario trata de adivinarlo, si el número que ingresó el usuario es menor, imprimir la pista "El número mágico es mayor", si el número que ingresó el usuario es mayor, imprimir la pista "El número mágico es menor",
- let numeroMagico = 7;
- let input = null;
+ 
+/**
+let numeroMagico = 7;
+let input = null;
 
  do{
       input = prompt()
       if(input > numeroMagico)console.log("El número mágico es menor") 
       if(input < numeroMagico)console.log("El número mágico es mayor") 
  }while(input != numeroMagico);
+ */
