@@ -43,3 +43,17 @@ function mayor_de_edad(edad){
 }
 
 mayor_de_edad(18);
+
+//Argumentos a funciones
+
+function cuadrados(numero = 0){ //Parametro// Es posible incializar el parametro para evitar errores de ejecución
+  return numero * numero;
+}
+
+cuadrados(2); //Argumento
+
+function suma_todos(){
+  return arguments[0] + arguments[1]; //propiedad de js para recibir argumentos.
+}
+
+console.log(suma_todos(1,2));
