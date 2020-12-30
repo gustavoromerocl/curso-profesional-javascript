@@ -22,9 +22,24 @@ function saludar(){
 saludar();
 
 function switch_nombres(){
-    var nombre = "Marcos"
-    console.log(nombre) //Scope local
+  var nombre = "Marcos"
+  console.log(nombre) //Scope local
 }
 
 switch_nombres() //scope local
 console.log(nombre) //Scope global
+
+//Cuando usar let, const y var
+
+function mayor_de_edad(edad){
+  if(edad >= 18){
+    var resultado = "Eres mayor de edad";//el scope o alcance esta dentro de las llaves de la funcion mas próxima
+  }
+  else{
+    let resultado = "Eres menor de edad"; //El scope o alcance esta dentro de las llaves mas proximas
+  }
+
+  console.log(resultado);
+}
+
+mayor_de_edad(18);
