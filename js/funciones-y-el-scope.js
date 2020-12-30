@@ -151,3 +151,24 @@ let estudiante = {
 }
 
 estudiante.nombreCompleto();
+
+
+// Call Apply y Bind
+
+function execute(funcion){
+  funcion.call(tutor) //Asigna el contexto al objeto tutor
+}
+
+let tutor = {
+  nombreTutor: "Andres",
+  apellidoTutor: "Romero",
+  nombreCompleto: function(){
+    console.log(this.nombreTutor + ' ' + this.apellidoTutor);
+  }
+}
+
+execute(tutor.nombreCompleto);
+
+//apply  function.apply(window, [Argumentos])
+
+executor(tutor.nombreCompleto.bind(tutor)) //asigna el conexto cuando se llama a la funcion
