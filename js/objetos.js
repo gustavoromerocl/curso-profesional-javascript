@@ -19,3 +19,20 @@ curso.titulo = 'Curso base de javascript';
 console.log(curso.titulo);
 
 curso['inscribir'] = function(){};
+
+//Funciones constructoras
+
+function Curso(titulo){
+    this.titulo = titulo
+    this.inscribir = function(usuario){
+        console.log(usuario + " se ha inscrito");
+    }
+}
+
+let cursoJavaScript = new Curso("Curso profesional de javascript");
+let cursoRuby = new Curso("Curso Ruby");
+
+cursoJavaScript.inscribir("Romero")
+
+console.log(cursoJavaScript.titulo)
+console.log(cursoRuby.titulo)
