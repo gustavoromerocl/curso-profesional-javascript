@@ -89,3 +89,25 @@ class Admin extends User{
 let admin = new Admin("Gustavo");
 
 admin.saludar();
+
+//Metodos accesadores
+
+class Usuario{
+    constructor(nombre){
+        this._name = nombre //Se define con un guión bajo para diferenciarla de los accesadores
+    }
+
+    //Accesador
+    get name(){
+        return this._name.charAt(0).toUpperCase() + this._name.slice(1);
+    }
+
+    //Mutador
+    set name(nombre){
+        this._name = nombre;
+    }
+}
+
+let user = new Usuario("gustavo");
+user.name("marcos")
+console.log(user.name)
