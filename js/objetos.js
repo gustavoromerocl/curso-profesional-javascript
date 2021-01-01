@@ -64,3 +64,28 @@ class ClaseCurso{
 let JavaScriptCurso = new ClaseCurso("Curso profesional de javascript");
 console.log(JavaScriptCurso.titulo);
 JavaScriptCurso.inscribir("Gustavo")
+
+//Herencia
+
+class User{
+    constructor(nombre){
+        this.nombre = nombre;
+    }
+    saludar(){
+        console.log('Hola ' + this.nombre)
+    }
+}
+
+class Admin extends User{
+    constructor(nombre){
+        super(nombre)
+    }
+    saludar(){
+        super.saludar();
+        console.log('Bienvenido al panel de administración')
+    }
+}
+
+let admin = new Admin("Gustavo");
+
+admin.saludar();
