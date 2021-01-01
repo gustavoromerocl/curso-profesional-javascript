@@ -36,3 +36,31 @@ cursoJavaScript.inscribir("Romero")
 
 console.log(cursoJavaScript.titulo)
 console.log(cursoRuby.titulo)
+
+//Clases
+
+
+/**
+class Ejemplo{};
+
+let Ejemplo = class{};
+
+let Ejemplo = class Ejemplo{}
+ */
+
+
+class ClaseCurso{
+    //Las propiedades se declaran dentro del constructor
+    constructor(titulo){
+        this.titulo = titulo
+    }
+
+    //Las funciones no requieren de la palabra function
+    inscribir(usuario){
+        console.log(usuario + ' se ha inscrito.');
+    }
+}
+
+let JavaScriptCurso = new ClaseCurso("Curso profesional de javascript");
+console.log(JavaScriptCurso.titulo);
+JavaScriptCurso.inscribir("Gustavo")
