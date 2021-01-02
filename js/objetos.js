@@ -134,4 +134,14 @@ let prueba = { nombre: "Romero"}
 
 console.log(typeof prueba);
 
-console.log(prueba.__proto__)
+console.log(prueba.__proto__);
+
+//Herencia de prototipos
+
+let animal = Object.create(null);
+animal.vivo = true;
+animal.estaVivo = function(){if(animal.vivo = true) console.log("Sigue vivo");}
+
+let perro = Object.create(animal);
+perro.estaVivo(); //Busca la funcion de los objetos desde donde hereda hasta encontrarse con el objeto null
+console.log(perro.edad); //retorna undefined ya que no existe la propiedad, realiza la busqueda hasta el objeto que hereda de null
