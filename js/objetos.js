@@ -1,5 +1,6 @@
 /**Objetos */
 
+
 //Declarar un objeto con JSON (JavaScript Object Notation)
 
 let curso = {
@@ -145,3 +146,35 @@ animal.estaVivo = function(){if(animal.vivo = true) console.log("Sigue vivo");}
 let perro = Object.create(animal);
 perro.estaVivo(); //Busca la funcion de los objetos desde donde hereda hasta encontrarse con el objeto null
 console.log(perro.edad); //retorna undefined ya que no existe la propiedad, realiza la busqueda hasta el objeto que hereda de null
+
+//La propiedad del prototype
+
+function User2() {} //Funcion constructora
+
+User2.prototype.saludar = function(){
+    console.log("Hola");
+}
+
+function Admin2(){}
+
+Admin2.prototype = new User2(); //asigna los prototypes de user2 a admin2
+
+let us2 = new User2();
+//let gustavo = Object.create(us2);
+
+let gustavo = new Admin2();
+
+
+console.log(us2.__proto__);
+console.log(User2.prototype); //prototype de la función
+
+console.log(User2.prototype == us2.__proto__);
+//El prototype de la funcion pasa a ser el de los objetros creados por dicha función
+
+//crea una funcion 
+
+
+//el objeto creado hereda la funcion saludar de la funcion padre
+us2.saludar();
+
+gustavo.saludar();
