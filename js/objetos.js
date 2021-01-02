@@ -111,3 +111,19 @@ class Usuario{
 let user = new Usuario("gustavo");
 user.name("marcos")
 console.log(user.name)
+
+//Métodos estáticos
+
+class Usuorio{
+    constructor(permisos = "lectura"){ this.permisos = permisos;}
+    static createAdmin(){
+        let user = new Usuorio("administrador")
+        return user;
+    };
+}
+
+let administrador = Usuario.createAdmin();
+
+class ComparadorUsuorios{
+    static quienEsMayor(usuario1,usuario2){ }
+}
