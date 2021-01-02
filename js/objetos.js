@@ -109,8 +109,8 @@ class Usuario{
 }
 
 let user = new Usuario("gustavo");
-user.name("marcos")
-console.log(user.name)
+user.name = "marcos";
+console.log(user.name);
 
 //Métodos estáticos
 
@@ -122,8 +122,16 @@ class Usuorio{
     };
 }
 
-let administrador = Usuario.createAdmin();
+let administrador = Usuorio.createAdmin();
 
 class ComparadorUsuorios{
     static quienEsMayor(usuario1,usuario2){ }
 }
+
+//Prototipos __prop__
+
+let prueba = { nombre: "Romero"}
+
+console.log(typeof prueba);
+
+console.log(prueba.__proto__)
