@@ -73,7 +73,7 @@ console.log(g.next());
 */
 
 
-/**DELEGAR GENERADORES */
+/**DELEGAR GENERADORES 
 
 function* counter(){
   for(var i = 1; i <= 5; i++){
@@ -97,3 +97,19 @@ console.log(g.next());
 console.log(g.next());
 console.log(g.next());
 console.log(g.next());
+
+//LIBRERIAS QUE UTILIZAR GENERADORES; CO.JS REDUX-SAGA
+*/
+
+
+
+/**MANEJO DE SÍMBOLOS */
+
+let simbolo = Symbol('mi-simbolo');
+let obj = {};
+
+obj[simbolo] = function(){
+  console.log('Mi nombre es un simbolo')
+}
+
+obj[simbolo]();
