@@ -59,7 +59,7 @@ console.log(generator.next());
 console.log(generator.next());
 console.log(generator.next());
 */
-/**RETURN EN FUNCIONES GENERADORAS */
+/**RETURN EN FUNCIONES GENERADORAS 
 
 //Las funciones generadoras hace un return implicito de un generador, si se llama explicitamente acaba la iteración.
 
@@ -69,4 +69,31 @@ function* retornador(){
 
 let g = retornador();
 
+console.log(g.next());
+*/
+
+
+/**DELEGAR GENERADORES */
+
+function* counter(){
+  for(var i = 1; i <= 5; i++){
+    yield i;
+  }
+}
+
+let generator = counter();
+
+//Este geenrador ejecuta otro generador en el primer yield
+function* retornador(){
+  yield* counter();
+  console.log('Regresé');
+}
+
+let g = retornador();
+
+console.log(g.next());
+console.log(g.next());
+console.log(g.next());
+console.log(g.next());
+console.log(g.next());
 console.log(g.next());
