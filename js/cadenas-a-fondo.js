@@ -18,3 +18,26 @@ console.log(typeof name);
 console.log("Prueba de \"caracteres\" ");
 
 // \n \t
+
+
+
+/**Concatenación e interpolación */
+
+let a = "Hola";
+let b = "Mundo";
+
+console.log(a.concat(b));
+
+//Template literals
+
+let pnombre = "Gustavo";
+let template = `Hola ${pnombre}, como estas?`;
+
+console.log(template);
+
+//Como rellenar espacios
+
+let mes = "2";
+
+console.log(mes.padStart(2, "0"));
+console.log(mes.padEnd(2, "0"));
