@@ -39,3 +39,19 @@ let newObject = {
 console.log(objeto);
 console.log(objetoDos);
 console.log(newObject);
+
+/** FOR OF y FOR IN */
+
+let arreglo = [2,3,4]
+
+for(numero of arreglo){
+  console.log(arreglo);
+}
+
+function saludarATodos(){
+  for(nombre of arguments){
+    console.log('Hola' + nombre);
+  }
+}
+
+saludarATodos('Tavo', 'CodigoFacilito', 'Alumnos');
