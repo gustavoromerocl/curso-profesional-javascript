@@ -42,7 +42,7 @@ function* counter(){
   console.log('Ahora estoy aquí');
   yield 2;
 }
-*/
+
 
 //yield detiene la ejecución del ciclo for
 function* counter(){
@@ -58,3 +58,15 @@ console.log(generator.next());
 console.log(generator.next());
 console.log(generator.next());
 console.log(generator.next());
+*/
+/**RETURN EN FUNCIONES GENERADORAS */
+
+//Las funciones generadoras hace un return implicito de un generador, si se llama explicitamente acaba la iteración.
+
+function* retornador(){
+  return 3;
+}
+
+let g = retornador();
+
+console.log(g.next());
