@@ -41,3 +41,16 @@ let mes = "2";
 
 console.log(mes.padStart(2, "0"));
 console.log(mes.padEnd(2, "0"));
+
+/** Comparación de cadenas */
+
+console.log("a".localeCompare("a"));
+console.log("v".localeCompare("z"));
+console.log("B".localeCompare("a"));
+console.log("z".localeCompare("q"));
+
+let prueba = "Hola";
+let segundaPrueba = prueba.toUpperCase();
+
+console.log(prueba);
+console.log(segundaPrueba);
