@@ -13,3 +13,35 @@ async function calcular() {
   });
 };
 
+/**AWAIT */
+
+//La palabra reservada await se usa dentro de funciones asíncronas para esperar que la promesa se resuelva y ejecutar la siguiente acción o callback, de esta forma se evita el uso de la palabra then
+
+let promesa = new Promise((resolve, reject)=>{
+  setTimeout(resolve,500,5);
+});
+
+promesa.then((resultado) => {console.log(resultado)});
+
+(async function(){
+//asigna el resultado de la promesa a una variable
+let resultado = await new Promise((resolve, reject)=>{
+  setTimeout(resolve,500,5);
+});
+
+let resultado2 = await new Promise((resolve, reject)=>{
+  setTimeout(resolve,500,10);
+});
+
+console.log(resultado + resultado2);
+
+}
+)();
+
+async function showGitHubInfo(){
+let response = await fetch("https://api.github.com/users/urielhdz/repos")
+let repos = await response.json();
+console.log(repos);
+}
+
+showGitHubInfo();
