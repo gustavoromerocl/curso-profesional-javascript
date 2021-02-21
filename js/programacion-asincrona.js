@@ -60,7 +60,7 @@ leer('http://google.com')
   })
 */
 
-/** RESOLVER MULTIPLES PROMESAS */
+/** RESOLVER MULTIPLES PROMESAS 
 
 let p1 = new Promise((resolve,reject) => setTimeout(resolve, 500, 'Hola mundo'))
 let p2 = new Promise((resolve,reject) => setTimeout(resolve, 600, 'Segundo hola mundo'))
@@ -68,17 +68,37 @@ let p3 = Promise.reject();
 
 //p1.then(console.log);
 
-/**
+
 p1.then(function(){
   p2.then(function(){
     saluda();
   })
 })
- */
+ 
 let saluda = () => console.log('Hola a todos');
 
-
+//Si una de las promesas falla, se cae la ejecución
 Promise.all([p1,p2, p3]).then(resultados => {
   console.log(resultados);
   saluda();
-}).catch(()=>console.log('fallé'))
+}).catch(()=>console.log('fallé'));
+
+*/
+
+/** ENCADENAR PROMESAS */
+
+function calcular(){
+  return new Promise((resolve, reject) => {
+    setTimeout(resolve,400,5);
+  })
+}
+
+function segundoCalculo(numero){
+  console.log(numero);
+  return new Promise((resolve, reject) => {
+    setTimeout(resolve,400,'Segunda promesa');
+  })
+}
+
+//segundoCalculo recibe como argumento el resultado de la primera promesa
+calcular().then(segundoCalculo).then(console.log);
