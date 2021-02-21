@@ -1,4 +1,4 @@
-/**ASYNC */
+/**ASYNC 
 const fetch = require("node-fetch");
 //La palabra reservada asyn permite declarar funciones asíncronas, retornando de forma implicita una promesa
 async function suma(valor1, valor2){
@@ -12,8 +12,8 @@ async function calcular() {
     setTimeout(resolve,500,5);
   });
 };
-
-/**AWAIT */
+*/
+/**AWAIT 
 
 //La palabra reservada await se usa dentro de funciones asíncronas para esperar que la promesa se resuelva y ejecutar la siguiente acción o callback, de esta forma se evita el uso de la palabra then
 
@@ -45,3 +45,15 @@ console.log(repos);
 }
 
 showGitHubInfo();
+*/
+/**MANEJAR ERRORES EN PROMESAS */
+async function errorManage(){
+  try{
+    let promesa = await Promise.reject("Error");
+  }catch(e){
+    console.log(e)
+  }
+}
+
+errorManage();
+
