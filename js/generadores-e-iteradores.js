@@ -1,6 +1,6 @@
 /**GENERADORES E ITERADORES */
 
-//ITERADORES 
+/* //ITERADORES 
 
 let iterador = {
   currentValue: 1,
@@ -15,6 +15,9 @@ let iterador = {
     return result;
   }
 };
+*/
+
+
  /**
 console.log(iterador.next());
 console.log(iterador.next());
@@ -103,7 +106,7 @@ console.log(g.next());
 
 
 
-/**MANEJO DE SÍMBOLOS */
+/**MANEJO DE SÍMBOLOS 
 
 //Se usan para asegurar que una cadena no sea reemplazada por similitud en el nombre de la variable.
 
@@ -115,8 +118,13 @@ obj[simbolo] = function(){
 }
 
 obj[simbolo]();
+*/
 
-/**ITERABLES CON ITERADORES */
+
+
+/**ITERABLES CON ITERADORES 
+
+//El symbol Iterator es parte de las propiedades del objeto, clases, etc
 
 let rango = {
   min: null,
@@ -138,7 +146,34 @@ let rango = {
   }
 }
 
+
 rango.min = 5;
 rango.max = 10;
 
 for(el of rango){console.log(el)};
+*/
+
+
+
+/**ITERABLES Y GENERADORES */
+
+let rango = {
+  min: null,
+  max: null,
+  [Symbol.iterator](){
+    return this.generator();
+  },
+  generator: function*(){
+    for(var i = this.min; i <= this.max; i++){
+      yield i;
+    }
+  },  
+};
+
+
+rango.min = 1;
+rango.max = 100;
+
+for(n of rango){
+  console.log(n);
+};
