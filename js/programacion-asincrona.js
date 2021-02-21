@@ -32,7 +32,7 @@ rp('http://google.com')
   });
 */
 
-/** CREAR MIS PROPIAS PROMESAS */
+/** CREAR MIS PROPIAS PROMESAS 
 
 const request = require('request');
 
@@ -58,4 +58,27 @@ leer('http://google.com')
   }).catch(function(e){
     console.log(e);
   })
+*/
 
+/** RESOLVER MULTIPLES PROMESAS */
+
+let p1 = new Promise((resolve,reject) => setTimeout(resolve, 500, 'Hola mundo'))
+let p2 = new Promise((resolve,reject) => setTimeout(resolve, 600, 'Segundo hola mundo'))
+let p3 = Promise.reject();
+
+//p1.then(console.log);
+
+/**
+p1.then(function(){
+  p2.then(function(){
+    saluda();
+  })
+})
+ */
+let saluda = () => console.log('Hola a todos');
+
+
+Promise.all([p1,p2, p3]).then(resultados => {
+  console.log(resultados);
+  saluda();
+}).catch(()=>console.log('fallé'))
