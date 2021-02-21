@@ -15,7 +15,7 @@ request('http://google.com', function(){
 console.log('Yo voy despues de la patición en el codigo');
 */
 
-/** PROMESAS  */
+/** PROMESAS  
 
 //fullfield: promesa complida
 //rejected: promesa no se cumple
@@ -30,3 +30,32 @@ rp('http://google.com')
   }).catch(function(e){
     console.log(e);
   });
+*/
+
+/** CREAR MIS PROPIAS PROMESAS */
+
+const request = require('request');
+
+function leer(url){
+  return new Promise(function(resolve, reject){
+    request(url, function(err, response){
+      if(err){
+        reject(err);
+      }
+      else{
+        resolve(response);
+      }
+    });
+    resolve('Todo salio muy bien');
+    reject(new Error('No se pudo completar'));
+  })
+}
+
+//Se ejecuta la promesa creada
+leer('http://google.com')
+  .then(function(response){
+    console.log(response);
+  }).catch(function(e){
+    console.log(e);
+  })
+
