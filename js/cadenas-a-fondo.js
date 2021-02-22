@@ -113,5 +113,19 @@ console.log(filtroDeMarcas(texto));
 console.log("    Hola Mundo    ".trim());
 
 console.log("Hola".length);
+//Repite la cadena el numero de veces que se indique
 console.log("Hola".repeat(3));
+//Reemplaza la cadena indicada por otra cadena
 console.log("Hola Mundo".replace("Mundo", "Cody"));
+
+
+/**Unicode */
+
+function toCodePoint(char){
+    var hex = char.charCodeAt(0).toString(16); //Convierte el caracter a hex
+    return "\\u"+hex.padStart(4,"0"); //Agrega los 0's faltantes al inicio
+}
+
+console.log(toCodePoint('a'));
+console.log('\u0061')
+console.log('\u1F60')
