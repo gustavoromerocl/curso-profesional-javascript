@@ -39,3 +39,11 @@ console.log("abcd".match(/[abcd]/));
 console.log("abcd".match(/abcd/));
 console.log("b".match(/[a-d]/));
 console.log("3".match(/[0-5]/));
+
+/**Agrupamientos ()*/
+
+/(\d-)*/ //Cualquier cantidad (*) de digitos y guiones
+
+console.log("123---3-2-".match(/(\d-)*/g));
+
+console.log("texto@dominio".match(/(\S+)@\S+/));
