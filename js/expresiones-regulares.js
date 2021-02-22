@@ -1,5 +1,7 @@
 /**Expresiones regulares */
 
+const { match } = require("assert");
+
 /Hola/
 
 //Literales, especiales (meta caracteres)
@@ -47,3 +49,9 @@ console.log("3".match(/[0-5]/));
 console.log("123---3-2-".match(/(\d-)*/g));
 
 console.log("texto@dominio".match(/(\S+)@\S+/));
+
+/**Cuantificadores */
+
+console.log("2222".match(/\d*/));
+console.log("2222".match(/\d{3}/));
+console.log("2222".match(/\d{2,4}/));
