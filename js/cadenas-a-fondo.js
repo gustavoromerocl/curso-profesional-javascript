@@ -70,3 +70,16 @@ console.log(cadena.slice(-5));
 
 //https://stackoverflow.com/questions/2243824/what-is-the-difference-between-string-slice-and-string-substring#:~:text=The%20slice()%20method%20extracts,parts%20in%20a%20new%20string.&te
 
+/** Búsqueda */
+
+console.log(cadena.indexOf("Mundo"));
+//retorna -1 cuando es falso 
+if(cadena.indexOf("Mundo") > 0 ) console.log("Encontrado");
+
+//retorna true o false
+if(cadena.includes("Mundo")) console.log("Encontrado");
+
+let link = "https://codigofacilito.com/";
+
+if(link.startsWith("https")) console.log("Es un link seguro");
+if(link.endsWith("com/")) console.log("Es un link seguro también");
