@@ -20,3 +20,10 @@ console.log(texto.match(/\d/g));
 
 //Retorna las cadenas unidas
 console.log(texto.match(/\d+/g));
+
+/** Reemplazando patrones */
+
+//Si se agrega g a la expresion regular, realiza el cambio en todas las instancias de la cadena
+let nuevoTexto = texto.replace(/Gustavo/g,"Gustavo Romero");
+
+console.log(nuevoTexto);
