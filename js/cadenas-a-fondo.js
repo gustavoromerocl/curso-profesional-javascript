@@ -106,3 +106,12 @@ function filtroDeMarcas(str){
 }
 
 console.log(filtroDeMarcas(texto));
+
+/** Otros métodos de las cadenas */
+
+//El metodo trim elimina los espacios en los bordes, tambienestan als variables trimStart para borrar el space del principio y trimEnd para el final
+console.log("    Hola Mundo    ".trim());
+
+console.log("Hola".length);
+console.log("Hola".repeat(3));
+console.log("Hola Mundo".replace("Mundo", "Cody"));
