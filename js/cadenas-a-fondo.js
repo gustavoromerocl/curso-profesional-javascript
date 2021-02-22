@@ -129,3 +129,4 @@ function toCodePoint(char){
 console.log(toCodePoint('a'));
 console.log('\u0061')
 console.log('\u1F60')
+
